@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <button id="idea-btn"><img src="idea.svg" alt="idea-logo"></button>
+        <div class="content flex">
+            <div id="guessCount" class="flex counter"></div>
+            <div id="ideaCount" class="flex counter"></div>
+            <input type="text" id="guess-input" placeholder="Enter your guess" class="flex">
+            <div class="control ">
+                <button id="guess-btn" class="btn">GUESS</button>
+                <button id="restart-btn" class="btn">RESTART</button>
+            </div>
+        </div>
+        <div id="message" class="flex">*** Guess Number between 1 to 100 ***</div>
+    </div>
+    <div id="idea-popup">
+        <p id="hint-msg"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
