@@ -21,10 +21,6 @@ let rand = Math.floor(Math.random() * 100 + 1)
             dislayGuessCount.textContent = guessCount
         }
 
-        function showMsg() {
-            hintMsg.textContent = `The number is between ${lowerbound} to ${upperbound} `
-        }
-
         function processGuess() {
 
             const userGuess = guessInput.value
@@ -38,17 +34,17 @@ let rand = Math.floor(Math.random() * 100 + 1)
             const numberGuess = Number(userGuess)
 
             if (numberGuess > rand) {
-                display("Too high! try again", guessCount)
+                display("Oops wrong Guess, try again",guessCount)
                 upperbound = numberGuess - 1
-                if(ideaCount < 3){
-                showMsg()
+                if(ideaCount < 5){
+                    hintMsg.textContent = "Too high, guess something smaller"
                 }
             }
             else if (numberGuess < rand) {
-                display("Too low! try again", guessCount)
+                display("Oops wrong guess, Guess again",guessCount)
                 lowerbound = numberGuess + 1
-                if(ideaCount < 3){
-                showMsg()
+                if(ideaCount < 5){
+                    hintMsg.textContent = "Too low, guess something bigger"
                 }
             }
             else if (numberGuess == rand) {
@@ -97,7 +93,7 @@ let rand = Math.floor(Math.random() * 100 + 1)
             hintPopup.style.visibility = "visible";
             hintPopup.style.top = "85px";
             if (guessCount > 0) {
-                if(ideaCount < 3){
+                if(ideaCount < 5){
                 ideaCount++
                 dislayIdeaCount.textContent = ideaCount
                 }
