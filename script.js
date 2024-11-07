@@ -34,14 +34,14 @@ let rand = Math.floor(Math.random() * 100 + 1)
             const numberGuess = Number(userGuess)
 
             if (numberGuess > rand) {
-                display("Oops!! wrong Guess, try again",guessCount)
+                display("Oops!! wrong Guess🙅‍♂️, try again",guessCount)
                 upperbound = numberGuess - 1
                 if(ideaCount < 5){
                     hintMsg.textContent = "Too high, guess something smaller"
                 }
             }
             else if (numberGuess < rand) {
-                display("Oops!! wrong guess, try again",guessCount)
+                display("Oops!! wrong guess🙅‍♂️, try again",guessCount)
                 lowerbound = numberGuess + 1
                 if(ideaCount < 5){
                     hintMsg.textContent = "Too low, guess something bigger"
